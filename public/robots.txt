@@ -1,0 +1,8 @@
+# See http://www.robotstxt.org/robotstxt.html for documentation on how to use the robots.txt file
+
+#Uncomment below if you don't want Google Robot to crawl site pages
+# The "User-agent: *" means this section applies to all robots. 
+# The "Disallow: /" tells the robot that it should not visit any pages on the site.
+
+#User-agent: *
+#Disallow: /

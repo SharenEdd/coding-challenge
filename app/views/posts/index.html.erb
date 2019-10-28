@@ -1,0 +1,28 @@
+<% content_for :page_title,  "CareerPlug Coding Challenge " %> 	        
+
+<div class="section">
+	<div class="container">
+	<%= form_tag(posts_path, :method => "get", id: "search-form") do %>
+		<%= text_field_tag :search, params[:search], placeholder: "Search Posts" %>
+		<%= submit_tag "Search" %>
+		<% end %>
+		<% @posts.each do |post| %>
+			<div class="card">
+		  <div class="card-content">
+		    <div class="media">
+			  <div class="media-content">
+		        <p class="title is-4"><%= link_to post.title, post  %></p>
+		      </div>
+			</div>
+			<!-- Truncate class added here -->
+		    <div class="content truncate">
+		     	<%= post.content %>
+			</div>
+		    <div class="comment-count">
+		    	<span class="tag is-rounded has-text-danger has-text-weight-bold is-size-.9"><%=link_to post.comments.count, post %>comments</span>
+		    </div>
+		  </div>
+		</div>
+		<% end %>
+	</div>
+</div>
