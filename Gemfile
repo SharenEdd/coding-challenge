@@ -1,4 +1,4 @@
-source 'https://rubygems.org'
+source 'http://rubygems.org'
 
 git_source(:github) do |repo_name|
   repo_name = "#{repo_name}/#{repo_name}" unless repo_name.include?("/")
@@ -39,7 +39,6 @@ gem 'better_errors', '~> 2.4'
 gem 'bulma-rails', '~> 0.6.1'
 # Simple forms
 gem 'simple_form', '~> 3.5'
-
 
 gem 'wdm', '>= 0.1.0'
 group :development, :test do
